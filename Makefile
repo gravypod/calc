@@ -1,4 +1,4 @@
-MODULES = tokenizer lexer parser
+MODULES = tokenizer lexer
 
 INCDIR  := $(abspath ./includes)
 OBJDIR  := $(abspath ./bin/obj)
