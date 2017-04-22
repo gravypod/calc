@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# set -o pipefail
+
+# Implement REPL
+if [[ -z $1 ]];
+then
+	echo "Welcome to math runtime!"
+	echo -n "> "
+	while read expression
+	do
+		$0 "$expression"
+		echo -n "> "
+	done
+
+	echo "Bye!"
+	exit 0
+fi
+
+
+# Implement compiler (mtokenize->mlexer->mparser->mruntime)
+SOURCE="${1}"
+TOKENS=$(echo "${SOURCE}" | ./bin/mtokenizer)
+
+echo "${TOKENS}" | ./bin/mlexer
+
+if [[ $? -ne 0 ]];
+then
+	echo "Failed to parse expression"
+fi
