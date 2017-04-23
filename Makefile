@@ -13,7 +13,7 @@ export
 all: $(MODULES)
 
 tokenizer:
-	$(MAKE) -C  mtokenizer
+	$(MAKE) -C mtokenizer
 
 lexer:
 	$(MAKE) -C mlexer
