@@ -28,3 +28,5 @@ if [[ $? -ne 0 ]];
 then
 	echo "Failed to parse expression"
 fi
+
+echo $(echo "${TOKENS}" | ./bin/mparser)

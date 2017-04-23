@@ -1,11 +1,11 @@
-MODULES = tokenizer lexer
+MODULES = tokenizer lexer parser
 
 INCDIR  := $(abspath ./includes)
 OBJDIR  := $(abspath ./bin/obj)
 BINDIR  := $(abspath ./bin)
 
 CC      := gcc
-CFLAGS  := -Wall -I$(INCDIR)/ -pedantic-errors -O2
+CFLAGS  := -Wall -I$(INCDIR)/ -pedantic-errors -O3
 LDFLAGS := -lm
 
 export
@@ -20,3 +20,4 @@ lexer:
 
 parser:
 	$(MAKE) -C mparser
+

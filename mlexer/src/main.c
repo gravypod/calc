@@ -39,6 +39,9 @@ int main(int argc, char **argv)
 
 		if (is_operation(last) && !(is_value(next) || next == T_OP_PAR))
 			return panic("ERR: Operations must be folloed by parens or values.\n");
+
+		// Pass token along
+		// printf("%s\n", token);
 	}
 
 	if (last != T_NUM && last != T_CL_PAR)
